@@ -70,7 +70,10 @@ dns:
   fake-ip-filter:
     - "+.lan"
     - "+.local"
+    - "+.gstatic.com"
+    - "+.miwifi.com"
     - "+.market.xiaomi.com"
+    - "+.push.apple.com"
   default-nameserver:
     - 223.5.5.5
   nameserver:
