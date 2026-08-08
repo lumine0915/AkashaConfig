@@ -80,18 +80,18 @@ dns:
 
 # 出站策略
 proxy-groups:
-  - {name: 默认代理, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: YouTube, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: Google, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: AI, type: select, proxies: [日本自动, 狮城自动, 美国自动, 自动选择, 日本节点, 狮城节点, 美国节点, 全部节点, 直连]}
-  - {name: GitHub, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: OneDrive, type: select, proxies: [日本自动, 狮城自动, 美国自动, 自动选择, 日本节点, 狮城节点, 美国节点, 全部节点, 直连]}
-  - {name: Microsoft, type: select, proxies: [日本自动, 狮城自动, 美国自动, 自动选择, 日本节点, 狮城节点, 美国节点, 全部节点, 直连]}
-  - {name: TikTok, type: select, proxies: [日本自动, 狮城自动, 美国自动, 自动选择, 日本节点, 狮城节点, 美国节点, 全部节点, 直连]}
-  - {name: Telegram, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: NETFLIX, type: select, proxies: [狮城自动, 日本自动, 美国自动, 香港自动, 自动选择, 狮城节点, 日本节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: PayPal, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
-  - {name: 漏网之鱼, type: select, proxies: [默认代理, 日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 日本节点, 狮城节点, 美国节点, 香港节点, 全部节点, 直连]}
+  - {name: 默认代理, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
+  - {name: YouTube, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
+  - {name: Google, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
+  - {name: AI, type: select, proxies: [日本节点, 狮城节点, 美国节点, 日本自动, 狮城自动, 美国自动, 自动选择, 全部节点, 直连]}
+  - {name: GitHub, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
+  - {name: OneDrive, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
+  - {name: Microsoft, type: select, proxies: [日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
+  - {name: TikTok, type: select, proxies: [日本节点, 狮城节点, 美国节点, 日本自动, 狮城自动, 美国自动, 自动选择, 全部节点, 直连]}
+  - {name: Telegram, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 全部节点, 直连]}
+  - {name: NETFLIX, type: select, proxies: [狮城节点, 日本节点, 美国节点, 香港节点, 狮城自动, 日本自动, 美国自动, 香港自动, 自动选择, 全部节点, 直连]}
+  - {name: PayPal, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 日本自动, 狮城自动, 美国自动, 香港自动, 自动选择, 全部节点, 直连]}
+  - {name: 漏网之鱼, type: select, proxies: [默认代理, 日本自动, 狮城自动, 美国自动, 香港自动, 日本节点, 狮城节点, 美国节点, 香港节点, 自动选择, 全部节点, 直连]}
 
   # 以下是地区分组。如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
   - {name: 香港自动, type: url-test, include-all: true, exclude-type: direct, tolerance: 50, interval: 300, filter: "(?i)(港|hk|hongkong|hong kong)"}
