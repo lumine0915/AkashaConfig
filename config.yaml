@@ -68,7 +68,6 @@ dns:
   fake-ip-range6: fdfe:dcba:9876::1/64
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "*"
     - "+.lan"
     - "+.local"
     - "+.market.xiaomi.com"
