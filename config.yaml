@@ -69,9 +69,6 @@ dns:
   fake-ip-filter:
     - "rule-set:fakeip-filter"
     - "rule-set:private_domain"
-    - "+.lan"
-    - "+.local"
-    - "+.market.xiaomi.com"
   default-nameserver:
     - 119.29.29.29
     - 223.5.5.5
