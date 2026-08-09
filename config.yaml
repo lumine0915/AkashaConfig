@@ -75,6 +75,7 @@ dns:
     - "+.market.xiaomi.com"
     - "+.push.apple.com"
   default-nameserver:
+    - 119.29.29.29
     - 223.5.5.5
   nameserver:
     - https://doh.pub/dns-query
