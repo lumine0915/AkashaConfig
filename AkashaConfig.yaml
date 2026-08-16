@@ -79,16 +79,16 @@ dns:
 # 出站策略
 proxy-groups:
   - {name: 默认代理, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: YouTube, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: Google, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: AI, type: select, proxies: [全球手动, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
-  - {name: GitHub, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: OneDrive, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: Microsoft, type: select, proxies: [日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: TikTok, type: select, proxies: [全球手动, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
-  - {name: Telegram, type: select, proxies: [全球手动, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
-  - {name: NETFLIX, type: select, proxies: [狮城节点, 日本节点, 美国节点, 香港节点, 全球手动, 直连]}
-  - {name: PayPal, type: select, proxies: [全球手动, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
+  - {name: YouTube, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
+  - {name: Google, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
+  - {name: AI, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
+  - {name: GitHub, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
+  - {name: OneDrive, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
+  - {name: Microsoft, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
+  - {name: TikTok, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
+  - {name: Telegram, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
+  - {name: NETFLIX, type: select, proxies: [狮城节点, 默认代理, 日本节点, 美国节点, 香港节点, 全球手动, 直连]}
+  - {name: PayPal, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 直连]}
   - {name: 漏网之鱼, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 香港节点, 全球手动, 直连]}
 
   # 以下是地区分组。如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
