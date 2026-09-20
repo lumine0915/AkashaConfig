@@ -1,5 +1,5 @@
 # 锚点
-as_url-test: &as_url-test {type: url-test, include-all: true, exclude-type: direct, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 50, hidden: true, lazy: true}
+as_url-test: &as_url-test {type: url-test, include-all: true, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 50, empty-fallback: REJECT, hidden: true, lazy: true}
 as_default: &as_default [日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
 as_auto: &as_auto [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
 as_select: &as_select [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]
