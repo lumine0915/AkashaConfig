@@ -1,5 +1,8 @@
 # 锚点
+## 节点相关
 as_url-test: &as_url-test {type: url-test, include-all: true, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 50, empty-fallback: REJECT, hidden: true, lazy: true}
+
+## 策略组相关
 as_default: &as_default [日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, DIRECT]
 as_auto: &as_auto [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, DIRECT]
 as_select: &as_select [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, DIRECT]
