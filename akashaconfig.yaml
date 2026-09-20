@@ -17,6 +17,15 @@ proxy-providers:
       interval: 300
     proxy: DIRECT
 
+# 自定义代理节点
+# proxies:
+#   - name: "ss1"
+#     type: ss
+#     server: server
+#     port: 443
+#     cipher: aes-128-gcm
+#     password: password
+
 # 全局配置
 mixed-port: 7890
 allow-lan: true
