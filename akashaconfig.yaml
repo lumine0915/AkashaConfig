@@ -1,9 +1,9 @@
 # 锚点
 as_url-test: &as_url-test {type: url-test, include-all: true, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 50, empty-fallback: REJECT, hidden: true, lazy: true}
-as_default: &as_default [日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
-as_auto: &as_auto [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
-as_select: &as_select [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]
-as_media: &as_media [狮城节点, 默认代理, 日本节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
+as_default: &as_default [日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, DIRECT]
+as_auto: &as_auto [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, DIRECT]
+as_select: &as_select [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, DIRECT]
+as_media: &as_media [狮城节点, 默认代理, 日本节点, 美国节点, 台湾节点, 香港节点, 全球手动, DIRECT]
 
 # 机场订阅
 proxy-providers:
@@ -15,11 +15,7 @@ proxy-providers:
       enable: true
       url: "https://www.gstatic.com/generate_204"
       interval: 300
-    proxy: 直连
-
-# 节点信息
-proxies:
-  - {name: 直连, type: direct}
+    proxy: DIRECT
 
 # 全局配置
 mixed-port: 7890
@@ -108,26 +104,26 @@ proxy-groups:
 
 # 规则匹配
 rules:
-  - RULE-SET,private_ip,直连,no-resolve
-  - RULE-SET,private_domain,直连
+  - RULE-SET,private_ip,DIRECT,no-resolve
+  - RULE-SET,private_domain,DIRECT
   - RULE-SET,ai,AI
   - RULE-SET,github_domain,GitHub
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,google_domain,Google
   - RULE-SET,onedrive_domain,OneDrive
   - RULE-SET,microsoft_domain,Microsoft
-  - RULE-SET,apple_domain,直连
+  - RULE-SET,apple_domain,DIRECT
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,telegram_domain,Telegram
   - RULE-SET,netflix_domain,NETFLIX
   - RULE-SET,paypal_domain,PayPal
-  - RULE-SET,apple_ip,直连
+  - RULE-SET,apple_ip,DIRECT
   - RULE-SET,google_ip,Google
   - RULE-SET,netflix_ip,NETFLIX
   - RULE-SET,telegram_ip,Telegram
   - RULE-SET,geolocation-!cn,默认代理
-  - RULE-SET,cn_domain,直连
-  - RULE-SET,cn_ip,直连
+  - RULE-SET,cn_domain,DIRECT
+  - RULE-SET,cn_ip,DIRECT
   - MATCH,漏网之鱼
 
 # 规则集
