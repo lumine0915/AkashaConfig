@@ -1,5 +1,9 @@
 # 锚点
 A-url-test: &A-url-test {type: url-test, include-all: true, exclude-type: direct, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 50, hidden: true, lazy: true}
+A-default: &A-default [日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
+A-auto: &A-auto [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
+A-select: &A-select [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]
+A-media: &A-media [狮城节点, 默认代理, 日本节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]
 
 # 机场订阅
 proxy-providers:
@@ -81,18 +85,18 @@ dns:
 
 # 出站策略
 proxy-groups:
-  - {name: 默认代理, type: select, proxies: [日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: YouTube, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: Google, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: AI, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]}
-  - {name: GitHub, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: OneDrive, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: Microsoft, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: TikTok, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]}
-  - {name: Telegram, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]}
-  - {name: NETFLIX, type: select, proxies: [狮城节点, 默认代理, 日本节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
-  - {name: PayPal, type: select, proxies: [全球手动, 默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 直连]}
-  - {name: 漏网之鱼, type: select, proxies: [默认代理, 日本节点, 狮城节点, 美国节点, 台湾节点, 香港节点, 全球手动, 直连]}
+  - {name: 默认代理, type: select, proxies: *A-default}
+  - {name: YouTube, type: select, proxies: *A-auto}
+  - {name: Google, type: select, proxies: *A-auto}
+  - {name: AI, type: select, proxies: *A-select}
+  - {name: GitHub, type: select, proxies: *A-auto}
+  - {name: OneDrive, type: select, proxies: *A-auto}
+  - {name: Microsoft, type: select, proxies: *A-auto}
+  - {name: TikTok, type: select, proxies: *A-select}
+  - {name: Telegram, type: select, proxies: *A-select}
+  - {name: NETFLIX, type: select, proxies: *A-media}
+  - {name: PayPal, type: select, proxies: *A-select}
+  - {name: 漏网之鱼, type: select, proxies: *A-auto}
 
   # 以下是地区分组。如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
   - {name: 香港节点, <<: *A-url-test, filter: "(?i)(港|hk|hongkong|hong kong)"}
